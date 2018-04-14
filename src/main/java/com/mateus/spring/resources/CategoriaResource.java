@@ -13,10 +13,10 @@ import com.mateus.spring.services.CategoriaService;
 @RestController
 @RequestMapping(value = "/categorias")
 public class CategoriaResource {
-	
+
 	@Autowired
 	private CategoriaService categoriaService;
-	
+
 	@RequestMapping(value = "/{id}", method = RequestMethod.GET)
 	public ResponseEntity<?> find(@PathVariable Integer id) {
 		Categoria categoria = categoriaService.buscar(id);
